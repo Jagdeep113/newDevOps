@@ -1,0 +1,19 @@
+# Set user information
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+# View configuration
+git config --list
+git config user.name  # View specific setting
+
+# Set default editor
+git config --global core.editor "code --wait"
+
+# Set default branch name
+git config --global init.defaultBranch main
+
+# Create aliases
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status

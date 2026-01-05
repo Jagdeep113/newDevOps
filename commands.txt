@@ -17,3 +17,21 @@ git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
+
+Repository Management
+
+# Initialize new repository
+git init
+
+# Clone a repository
+git clone <repository-url>
+git clone <repository-url> <directory-name>
+git clone --depth 1 <url>  # Shallow clone (only latest commit)
+
+# Check repository status
+git status
+git status -s  # Short format
+git status -u  # Show untracked files
+
+# Remove repository metadata (danger!)
+rm -rf .git

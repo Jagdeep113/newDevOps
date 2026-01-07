@@ -35,3 +35,27 @@ git status -u  # Show untracked files
 
 # Remove repository metadata (danger!)
 rm -rf .git
+
+Basic Workflow
+
+# Add files to staging area
+git add <file>
+git add .  # Add all files
+git add *.js  # Add all JS files
+git add -A  # Add all (including deletions)
+git add -u  # Add only modified/deleted files
+
+# Commit changes
+git commit -m "Commit message"
+git commit -am "Add and commit in one step"  # Only for tracked files
+git commit --amend  # Modify last commit
+git commit --amend --no-edit  # Amend without changing message
+
+# View commits
+git log
+git log --oneline  # Compact view
+git log --graph --oneline --all  # Visual history
+git log -p  # Show changes
+git log --stat  # Show stats
+git log --since="2 weeks ago"
+git log --author="name"

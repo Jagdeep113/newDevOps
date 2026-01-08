@@ -59,3 +59,47 @@ git log -p  # Show changes
 git log --stat  # Show stats
 git log --since="2 weeks ago"
 git log --author="name"
+
+Branching & Merging
+
+# List branches
+git branch
+git branch -a  # Show all branches (including remote)
+git branch -v  # Show last commit on each branch
+git branch --merged  # Show merged branches
+
+# Create branches
+git branch <branch-name>
+git checkout -b <branch-name>  # Create and switch
+git switch -c <branch-name>   # Alternative (Git 2.23+)
+
+# Switch branches
+git checkout <branch-name>
+git switch <branch-name>  # Alternative (Git 2.23+)
+
+# Delete branches
+git branch -d <branch-name>  # Safe delete (merged only)
+git branch -D <branch-name>  # Force delete
+git push origin --delete <branch-name>  # Delete remote branch
+
+# Rename branch
+git branch -m <new-name>  # Rename current branch
+git branch -m <old-name> <new-name>
+
+# Merge branches
+git merge <branch-name>
+git merge --no-ff <branch-name>  # Always create merge commit
+git merge --squash <branch-name>  # Squash all commits into one
+
+# Rebase (rewrite history)
+git rebase <branch-name>
+git rebase -i HEAD~3  # Interactive rebase last 3 commits
+
+# Stash changes
+git stash  # Save changes temporarily
+git stash save "message"
+git stash list
+git stash pop  # Apply and remove
+git stash apply  # Apply but keep in stash
+git stash drop  # Remove specific stash
+git stash clear  # Remove all stashes

@@ -103,3 +103,33 @@ git stash pop  # Apply and remove
 git stash apply  # Apply but keep in stash
 git stash drop  # Remove specific stash
 git stash clear  # Remove all stashes
+
+Remote Repositories
+
+# Manage remotes
+git remote add origin <url>
+git remote -v  # View remotes
+git remote show origin  # Show remote info
+git remote rename <old> <new>
+git remote remove <name>
+
+# Fetch changes
+git fetch  # Fetch all remotes
+git fetch origin  # Fetch from specific remote
+git fetch --prune  # Remove deleted remote branches
+
+# Pull changes
+git pull  # Fetch + merge
+git pull origin <branch>
+git pull --rebase  # Pull with rebase instead of merge
+
+# Push changes
+git push
+git push origin <branch>
+git push -u origin <branch>  # Set upstream branch
+git push --force  # Force push (danger!)
+git push --force-with-lease  # Safer force push
+
+# Track remote branches
+git branch -u origin/<branch>  # Set upstream
+git branch -vv  # View tracking branches

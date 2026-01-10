@@ -133,3 +133,22 @@ git push --force-with-lease  # Safer force push
 # Track remote branches
 git branch -u origin/<branch>  # Set upstream
 git branch -vv  # View tracking branches
+
+Comparing & Inspecting
+
+# Compare changes
+git diff  # Unstaged changes
+git diff --staged  # Staged changes
+git diff HEAD  # All changes since last commit
+git diff <commit1> <commit2>
+git diff <branch1>..<branch2>
+git diff --name-only  # Show only filenames
+
+# Show specific commit
+git show <commit>
+git show HEAD~1  # Show previous commit
+git show <commit>:<file>  # Show file at specific commit
+
+# Blame (who changed what)
+git blame <file>
+git blame -L 10,20 <file>  # Specific lines

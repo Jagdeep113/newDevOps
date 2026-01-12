@@ -177,3 +177,25 @@ git revert --no-commit <commit>  # Revert without committing
 git clean -n  # Show what would be deleted
 git clean -f  # Delete untracked files
 git clean -fd  # Delete untracked files and directories
+
+Tagging
+
+# Create tags
+git tag v1.0.0  # Lightweight tag
+git tag -a v1.0.0 -m "Version 1.0.0"  # Annotated tag
+git tag -a v1.0.0 <commit>  # Tag specific commit
+
+# List tags
+git tag
+git tag -l "v1.*"  # Filter tags
+
+# Show tag info
+git show v1.0.0
+
+# Delete tags
+git tag -d v1.0.0  # Local delete
+git push origin --delete v1.0.0  # Remote delete
+
+# Push tags
+git push origin v1.0.0  # Single tag
+git push origin --tags  # All tags

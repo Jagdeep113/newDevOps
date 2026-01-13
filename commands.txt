@@ -199,3 +199,16 @@ git push origin --delete v1.0.0  # Remote delete
 # Push tags
 git push origin v1.0.0  # Single tag
 git push origin --tags  # All tags
+
+
+Searching
+
+# Search in commits
+git log --grep="search term"
+git log -S "function_name"  # Search in code changes
+git log -p --grep="search term"
+
+# Search in files
+git grep "search term"
+git grep -n "search term"  # Show line numbers
+git grep --cached "search term"  # Search in staged files
